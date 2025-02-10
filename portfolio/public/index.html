@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - M Kartikeya Datta</title>
   <link rel="stylesheet" href="/portfolio/src/css/styles.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      emailjs.init({
+        publicKey: "Y_h-hpWoDLa4NFWAxF", // Replace with your EmailJS Public Key
+      });
+    })();
+  </script>
 </head>
 <body>
   <header>
@@ -55,11 +63,12 @@
   <section id="contact">
     <h2>Contact Me</h2>
     <form id="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
       <button type="submit" class="btn">Send Message</button>
     </form>
+    <p id="form-status"></p> <!-- Status message for form submission -->
   </section>
 
   <footer>
